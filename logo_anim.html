@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>Logo Anim</title>
+</head>
+<body>
+
+<!--SVG-->
+  <svg id="logo" width="308" height="69" viewBox="0 0 308 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M154.588 41.6123V3.77222H176.984V36.8823C176.984 48.9165 183.934 53.9683 193.201 53.9683C202.468 53.9683 207.101 48.9165 207.101 36.8823V3.77222H228.724V41.6123C228.724 51.9089 223.318 65.552 204.784 66.3242C199.379 66.3241 193.973 66.3242 193.201 66.3242C192.429 66.3242 187.023 66.3241 180.845 66.3242C161.539 64.8941 154.588 52.4238 154.588 41.6123Z" fill="#45ACD8"/>
+    <path d="M237 45.8009H254.082C254.082 49.5415 257.941 52.0821 259.809 53.2821C261.677 54.482 265.859 54.7783 269.612 54.7783C273.3 54.7783 276.499 54.453 278.929 53.2821C280.482 52.5339 283.588 49.9164 283.588 47.2972C283.588 44.678 282.39 42.6051 279.706 41.3122C277.022 40.0193 273.785 39.0679 268.059 38.3198C260.401 37.3193 253.306 35.1913 250.2 33.8311C241.659 30.0905 237 25.6018 237 19.6169C237 13.632 246.318 8.39517 250.2 6.89894C254.082 5.40272 257.965 4 268.835 4C279.706 4 286.694 6.89894 292.129 10.6395C297.565 14.3801 301.447 18.8688 301.447 21.1131H283.588C282.035 17.3725 272.718 15.1282 268.835 15.1282C264.953 15.1282 266.248 15.1282 264.953 15.1282C260.294 15.1282 254.082 16.267 254.082 20.365C254.082 24.463 258.741 24.8537 261.071 25.6018C263.4 26.3499 269.612 27.3118 273.494 27.8462C277.376 28.3805 282.035 29.6254 285.918 30.8386C289.8 32.0518 290.731 32.4094 293.682 33.8311C295.235 34.5792 298.341 36.8235 299.894 39.0679C301.447 41.3122 303 44.1177 303 47.2972C303 53.2821 296.788 58.2695 292.906 60.7632C289.024 63.2569 284.074 66 269.612 66C255.15 66 249.148 61.9628 246.318 60.0151C243.488 58.0674 237 51.7858 237 45.8009Z" fill="#FACE0F"/>
+    <path d="M4 65.9996V4.00865H67.2523V14.9944H24.8269V25.9801H64.1666V38.5353H24.8269V52.6598H67.2523V65.9996H4Z" fill="#45ACD8"/>
+    <path d="M75.7371 37.7506V4.10732C86.7934 4.33619 108.289 3.93733 111.991 4.00868C137.446 4.49927 145.931 12.6405 145.931 26.7649V43.2435C145.191 62.0762 129.733 65.9996 111.991 65.9996L75.7371 66V52.6602L98.5039 52.6598L112.763 52.6602C117.834 52.6602 124.333 48.7365 124.333 41.9684V35.4948V29.1191C124.333 23.2692 121.248 16.5642 112.763 16.5642L98.5039 16.5637V37.7506H75.7371Z" fill="#45ACD8"/>
+  </svg>
+<!--SVG-->
+
+<!--style CSS-->
+  <style>
+    #logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      padding 15px;
+    }
+
+    #logo path {
+      fill: transparent;
+      stroke-width: 3;
+    }
+
+    #logo path:nth-child(1) {
+      stroke: #45ACD8;
+      stroke-dasharray: 340.671;
+      stroke-dashoffset: 340.671;
+      animation: line-anim 2s cubic-bezier(.7,0,.3,1) forwards .8s, fill-anim-blue 1.5s ease forwards 3s;
+    }
+    #logo path:nth-child(4) {
+      stroke: #45ACD8;
+      stroke-dasharray: 373.566;
+      stroke-dashoffset: 373.566;
+      animation: line-anim 2s cubic-bezier(.7,0,.3,1) forwards 0.4s, fill-anim-blue 1.5s ease forwards 3s;
+    }
+    #logo path:nth-child(3) {
+      stroke: #45ACD8;
+      stroke-dasharray: 414.016;
+      stroke-dashoffset: 414.016;
+      animation: line-anim 2s cubic-bezier(.7,0,.3,1) forwards, fill-anim-blue 1.5s ease forwards 3s;
+    }
+    #logo path:nth-child(2) {
+      stroke: #FACE0F;
+      stroke-dasharray: 385.826;
+      stroke-dashoffset: 385.826;
+      animation: line-anim 2s cubic-bezier(.6,0,.4,1) forwards 1.2s, fill-anim-yellow 1.5s ease forwards 3s;
+    }
+
+    @keyframes line-anim {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    @keyframes fill-anim-blue {
+      to {
+        fill: #45ACD8;
+      }
+    }
+    @keyframes fill-anim-yellow {
+      to {
+        fill: #FACE0F;
+      }
+    }
+  </style>
+<!--style CSS-->
+
+<!--script JS-->
+  <script>
+    let logo = document.querySelectorAll('#logo path');
+
+    for(let i = 0; i<logo.length; i++) {
+      console.log(logo[i].getTotalLength());
+    }
+  </script>
+<!--script JS-->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
